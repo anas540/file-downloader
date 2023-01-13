@@ -14,7 +14,7 @@
 	<dependency id="cordova-plugin-zip" version=">=3.1.0" />
 	<dependency id="cordova-plugin-file-md5" version="~0.3.3" />
 
-	<js-module src="downloader.js" name="downloader">
+	<js-module src="src/downloader.js" name="downloader">
 		<clobbers target="downloader" />
 	</js-module>
 </plugin>
