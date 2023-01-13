@@ -199,8 +199,8 @@ var Downloader = {
    * @param {FileObject} fileObject
    */
   transferFile: function(fileObject) {
-    //console.log("tranfserFile");
-    var filePath = Downloader.localFolder.toURL() + "/" + fileObject.name;
+    console.log("tranfserFile",fileObject);
+    var filePath = Downloader.localFolder.toURL() + fileObject.name;
     Downloader.transfer = new FileTransfer();
     Downloader.transfer.onprogress = function(progressEvent) {
       if (progressEvent.lengthComputable) {
@@ -208,6 +208,7 @@ var Downloader = {
         document.dispatchEvent(createEvent("DOWNLOADER_downloadProgress", [percentage, fileObject.name]));
       }
     };
+    console.log(fileObject.url,'fo',filePath,'fp')
     Downloader.transfer.download(fileObject.url, filePath, function(entry) {
       // console.log("transferFile, succcess file name: " + Downloader.fileObjectInProgress.name);
       document.dispatchEvent(createEvent("DOWNLOADER_downloadSuccess", [entry]));

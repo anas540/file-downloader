@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-file-downloader" version="0.4.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="file-downloader" version="0.5.0">
 	<name>Downloader</name>
 	<author>Fabian Strachanski</author>
 	<author>Manuel Ramon Lopez Torres</author>
@@ -14,7 +14,7 @@
 	<dependency id="cordova-plugin-zip" version=">=3.1.0" />
 	<dependency id="cordova-plugin-file-md5" version="~0.3.3" />
 
-	<js-module src="www/downloader.min.js" name="downloader">
+	<js-module src="downloader.js" name="downloader">
 		<clobbers target="downloader" />
 	</js-module>
 </plugin>
